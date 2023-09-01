@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+:root {
+    --background-color: #1e1e2e;
+    --text-color: #89dceb;
+    --secondary-text-color: #cdd6f4;
+    --hex-color: #7f849c;
+    --icon-color: #f2cdcd;
+    --pfp-border-color: #f5c2e7;
+
+    --icon-size: 7vmin;
+    --pfp-size: 15vmin;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+#sources {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: calc(var(--icon-size) / 2);
+    left: calc(var(--icon-size) / 2);
+}
+
+.source {
+    color: var(--text-color);
+    text-decoration: none;
+    transform: translate(0%, 0%);
+}
+
+.source::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background-color: var(--hex-color);
+    mask: url("res/hexagon.svg");
+    mask-size: contain;
+}
+
+.source > div {
+    background-color: var(--icon-color);
+    width: var(--icon-size);
+    height: var(--icon-size);
+    scale: 65%;
+}
+
+#sources > *:nth-child(2n) {
+    transform: translateY(-60%);
+}
+
+#profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: var(--pfp-size);
+}
+
+#pfp {
+    width: var(--pfp-size);
+    height: var(--pfp-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pfp > img {
+    mask: url("res/hexagon.svg");
+    mask-size: contain;
+    width: calc(0.90 * var(--pfp-size));
+    height: calc(0.90 * var(--pfp-size));
+}
+#pfp::before {
+    content: "";
+    width: var(--pfp-size);
+    height: var(--pfp-size);
+    display: block;
+    position: absolute;
+    background-color: var(--pfp-border-color);
+    mask: url("res/hexagon.svg");
+    mask-size: contain;
+}
+
+#details div {
+    mask: url("res/2xhexagon.svg");
+    mask-size: calc(var(--pfp-size) * 2);
+    width: calc(var(--pfp-size) * 2);
+    height: var(--pfp-size);
+    text-align: center;
+    line-height: var(--pfp-size);
+    font-family: Comfortaa, sans-serif;
+}
+
+#name-wrapper {
+    position: absolute;
+    transform: translateY(-60%);
+    background: var(--secondary-text-color);
+}
+
+#quote-wrapper {
+    transform: translateY(60%);
+    background: var(--text-color);
+}
+
+#name {
+    background: var(--background-color);
+    color: var(--text-color);
+    scale: 95% 90%;
+    font-size: calc(var(--pfp-size) / 3);
+}
+
+#quote {
+    background: var(--background-color);
+    color: var(--secondary-text-color);
+    scale: 95% 90%;
+    font-size: calc(var(--pfp-size) / 5);
+}
