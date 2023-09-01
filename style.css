@@ -4,16 +4,34 @@
     --background-color: #1e1e2e;
     --text-color: #89dceb;
     --secondary-text-color: #cdd6f4;
-    --hex-color: #7f849c;
-    --icon-color: #f2cdcd;
+    --hex-color: #b4befe;
+    --icon-color: #1e1e2e;
     --pfp-border-color: #f5c2e7;
+
+    --name-bg-color: #1e1e2e;
+    --quote-bg-color: #1e1e2e;
 
     --icon-size: 7vmin;
     --pfp-size: 15vmin;
+
+    --transition-time: 0.25s;
+
+    --clickable-transition: var(--transition-time) linear filter;
+    --clickable-filter: brightness(80%);
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+    to {
+        background-position: -200% center;
+    }
 }
 
 body {
-    background-color: var(--background-color);
+    background: var(--background-color);
+    background-size: 200%;
 }
 
 #sources {
@@ -28,6 +46,11 @@ body {
     color: var(--text-color);
     text-decoration: none;
     transform: translate(0%, 0%);
+    transition: var(--clickable-transition);
+}
+
+.source:hover {
+    filter: var(--clickable-filter);
 }
 
 .source::before {
@@ -39,6 +62,8 @@ body {
     background-color: var(--hex-color);
     mask: url("res/hexagon.svg");
     mask-size: contain;
+    -webkit-mask: url("res/hexagon.svg");
+    -webkit-mask-size: contain;
 }
 
 .source > div {
@@ -69,14 +94,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: var(--clickable-transition);
+    cursor: pointer;
+}
+
+#pfp:hover {
+    filter: var(--clickable-filter);
 }
 
 #pfp > img {
     mask: url("res/hexagon.svg");
     mask-size: contain;
+    -webkit-mask: url("res/hexagon.svg");
+    -webkit-mask-size: contain;
     width: calc(0.90 * var(--pfp-size));
     height: calc(0.90 * var(--pfp-size));
 }
+
 #pfp::before {
     content: "";
     width: var(--pfp-size);
@@ -86,11 +120,22 @@ body {
     background-color: var(--pfp-border-color);
     mask: url("res/hexagon.svg");
     mask-size: contain;
+    -webkit-mask: url("res/hexagon.svg");
+    -webkit-mask-size: contain;
+}
+
+#details {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #details div {
     mask: url("res/2xhexagon.svg");
     mask-size: calc(var(--pfp-size) * 2);
+    -webkit-mask: url("res/2xhexagon.svg");
+    -webkit-mask-size: contain;
     width: calc(var(--pfp-size) * 2);
     height: var(--pfp-size);
     text-align: center;
@@ -102,6 +147,12 @@ body {
     position: absolute;
     transform: translateY(-60%);
     background: var(--secondary-text-color);
+    transition: var(--clickable-transition);
+    cursor: pointer;
+}
+
+#name-wrapper:hover {
+    filter: var(--clickable-filter);
 }
 
 #quote-wrapper {
@@ -110,14 +161,14 @@ body {
 }
 
 #name {
-    background: var(--background-color);
+    background: var(--name-bg-color);
     color: var(--text-color);
     scale: 95% 90%;
     font-size: calc(var(--pfp-size) / 3);
 }
 
 #quote {
-    background: var(--background-color);
+    background: var(--quote-bg-color);
     color: var(--secondary-text-color);
     scale: 95% 90%;
     font-size: calc(var(--pfp-size) / 5);
