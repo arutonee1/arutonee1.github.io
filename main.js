@@ -25,6 +25,8 @@ let current_quote = Math.floor(Math.random() * quotes.length);
 
 function main() {
     add_sources();
+    change_name();
+    change_quote();
 }
 
 function add_sources() {
