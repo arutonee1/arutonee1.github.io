@@ -158,6 +158,12 @@ body {
 #quote-wrapper {
     transform: translateY(60%);
     background: var(--text-color);
+    transition: var(--clickable-transition);
+    cursor: pointer;
+}
+
+#quote-wrapper:hover {
+    filter: var(--clickable-filter);
 }
 
 #name {

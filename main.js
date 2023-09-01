@@ -16,6 +16,13 @@ const names = [
 
 let current_name = 0;
 
+const quotes = [
+    "The dumb one",
+    `${(new Date(Date.now() - new Date('Feb, 23, 2009'))).getFullYear() - 1970} y.o.`,
+];
+
+let current_quote = 0;
+
 function main() {
     add_sources();
 }
@@ -52,4 +59,9 @@ function change_background() {
 function change_name() {
     current_name = (current_name + 1) % names.length;
     document.querySelector('#name').innerText = names[current_name];
+}
+
+function change_quote() {
+    current_quote = (current_quote + 1) % quotes.length;
+    document.querySelector('#quote').innerText = quotes[current_quote];
 }
