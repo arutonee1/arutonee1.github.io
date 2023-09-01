@@ -14,14 +14,14 @@ const names = [
     'Luna',
 ];
 
-let current_name = 0;
+let current_name = Math.floor(Math.random() * names.length);
 
 const quotes = [
     "The dumb one",
     `${(new Date(Date.now() - new Date('Feb, 23, 2009'))).getFullYear() - 1970} y.o.`,
 ];
 
-let current_quote = 0;
+let current_quote = Math.floor(Math.random() * quotes.length);
 
 function main() {
     add_sources();
