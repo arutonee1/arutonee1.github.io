@@ -18,6 +18,8 @@
 
     --clickable-transition: var(--transition-time) linear filter;
     --clickable-filter: brightness(80%);
+
+    --hexagon-constant: calc(tan(30deg) * 100%);
 }
 
 @keyframes background-pan {
@@ -74,7 +76,7 @@ body {
 }
 
 #sources > *:nth-child(2n) {
-    transform: translateY(-60%);
+    transform: translateY(calc(-1 * var(--hexagon-constant)));
 }
 
 #profile {
@@ -145,7 +147,7 @@ body {
 
 #name-wrapper {
     position: absolute;
-    transform: translateY(-60%);
+    transform: translateY(calc(-1 * var(--hexagon-constant)));
     background: var(--secondary-text-color);
     transition: var(--clickable-transition);
     cursor: pointer;
@@ -156,7 +158,7 @@ body {
 }
 
 #quote-wrapper {
-    transform: translateY(60%);
+    transform: translateY(var(--hexagon-constant));
     background: var(--text-color);
     transition: var(--clickable-transition);
     cursor: pointer;
