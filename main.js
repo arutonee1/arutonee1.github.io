@@ -1,5 +1,7 @@
 const sources = [
     { data: 'res/theme.svg', href: 'https://github.com/catppuccin/catppuccin' },
+    { data: 'res/gitlab.svg', href: 'https://gitlab.com/arutonee1' },
+    { data: 'res/github.svg', href: 'https://github.com/arutonee1' },
     { data: 'res/anilist.svg', href: 'https://anilist.co/user/arutonee/' },
     { data: 'res/youtube.svg', href:'https://www.youtube.com/@arutonee5434' },
     { data: 'res/steam.svg', href: 'https://steamcommunity.com/profiles/76561199436675295/' },
