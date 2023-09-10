@@ -75,8 +75,15 @@ body {
     scale: 65%;
 }
 
-#sources > *:nth-child(2n) {
+#sources > *:nth-child(even) {
     transform: translateY(calc(-1 * var(--hexagon-constant)));
+}
+
+#sources > *:nth-child(2n+5) {
+    transform: translate(calc(-4 * var(--icon-size)), calc(-2 * var(--hexagon-constant)));
+}
+#sources > *:nth-child(2n+6) {
+    transform: translate(calc(-4 * var(--icon-size)), calc(-3 * var(--hexagon-constant)))
 }
 
 #profile {
