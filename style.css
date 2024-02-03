@@ -79,10 +79,10 @@ body {
     transform: translateY(calc(-1 * var(--hexagon-constant)));
 }
 
-#sources > *:nth-child(2n+5) {
+#sources > *:nth-child(2n+4) {
     transform: translate(calc(-4 * var(--icon-size)), calc(-2 * var(--hexagon-constant)));
 }
-#sources > *:nth-child(2n+6) {
+#sources > *:nth-child(2n+5) {
     transform: translate(calc(-4 * var(--icon-size)), calc(-3 * var(--hexagon-constant)))
 }
 

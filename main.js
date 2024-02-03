@@ -5,7 +5,6 @@ const sources = [
     { data: 'res/anilist.svg', href: 'https://anilist.co/user/arutonee/' },
     { data: 'res/youtube.svg', href:'https://www.youtube.com/@arutonee5434' },
     { data: 'res/steam.svg', href: 'https://steamcommunity.com/profiles/76561199436675295/' },
-    { data: 'res/gemini.svg', href: 'gemini://gemlog.blue/users/arutonee' },
 ];
 
 let special_bg = false;
