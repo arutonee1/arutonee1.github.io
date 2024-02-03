@@ -80,10 +80,10 @@ body {
 }
 
 #sources > *:nth-child(2n+4) {
-    transform: translate(calc(-4 * var(--icon-size)), calc(-2 * var(--hexagon-constant)));
+    transform: translate(calc(-3 * var(--icon-size)), calc(-2 * var(--hexagon-constant)));
 }
 #sources > *:nth-child(2n+5) {
-    transform: translate(calc(-4 * var(--icon-size)), calc(-3 * var(--hexagon-constant)))
+    transform: translate(calc(-3 * var(--icon-size)), calc(-3 * var(--hexagon-constant)))
 }
 
 #profile {
